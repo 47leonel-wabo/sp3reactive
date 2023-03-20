@@ -11,5 +11,12 @@
         <div th:text="${employee.firstName + ' - ' + employee.lastName}"></div>
     </li>
 </ul>
+<div>
+    <form th:action="@{/new-employee}" th:object="${newEmployee}" method="post">
+        <input type="text" th:field="*{firstName}"/>
+        <input type="text" th:field="*{lastName}"/>
+        <input type="submit"/>
+    </form>
+</div>
 </body>
 </html>
