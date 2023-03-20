@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Writhing Reactive Web Controller</title>
+</head>
+<body>
+<h2>Employees</h2>
+<ul>
+    <li th:each="employee : ${employees}">
+        <div th:text="${employee.firstName + ' - ' + employee.lastName}"></div>
+    </li>
+</ul>
+</body>
+</html>
