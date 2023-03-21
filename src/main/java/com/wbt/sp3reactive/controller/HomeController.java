@@ -16,8 +16,7 @@ import java.util.Map;
 @Controller
 public class HomeController {
 
-    private final Map<String, Employee> DATABASE = new HashMap<>();
-
+    public static final Map<String, Employee> DATABASE = new HashMap<>();
 
     @PostConstruct
     private void initialize() {

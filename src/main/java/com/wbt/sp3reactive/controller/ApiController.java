@@ -8,11 +8,12 @@ import reactor.core.publisher.Mono;
 import java.util.HashMap;
 import java.util.Map;
 
+
 @RestController
 @RequestMapping(path = {"/api/employees"})
 public class ApiController {
 
-    private final Map<String, Employee> DATABASE = new HashMap<>();
+    public final static Map<String, Employee> DATABASE = new HashMap<>();
 
     @GetMapping
     public Flux<Employee> employees() {
